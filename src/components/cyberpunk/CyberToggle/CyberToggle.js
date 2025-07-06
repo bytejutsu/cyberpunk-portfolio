@@ -15,4 +15,5 @@ const CyberToggle = ({ enabled, onToggle }) => (
     </div>
 );
 
+
 export default CyberToggle;
