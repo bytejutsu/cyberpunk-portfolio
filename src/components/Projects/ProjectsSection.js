@@ -1,0 +1,126 @@
+import React from 'react';
+import CyberpunkButton from "@/components/cyberpunk/CyberpunkButton/CyberpunkButton";
+import EmblaCarousel from "@/components/Projects/EmblaCarousel/EmblaCarousel";
+import styles from "@/app/Globals.module.css";
+import { FaDraftingCompass } from "react-icons/fa";
+import getAssetPath from "@/utils/getAssetPath";
+
+const ProjectSection = () => {
+
+    const OPTIONS = { loop: true }
+    const PROJECTS_COUNT = 6
+    const PROJECTS = [
+        {
+            index: 0,
+            name: "Arcade Adventures",
+            description: "an arcade game made that can be run on the browser",
+            imageUrl: getAssetPath('./projects/arcade.png'),
+            demoAvailable: true,
+            demoUrl: 'https://bytejutsu.github.io/platformer/',
+            githubUrl: 'https://github.com/bytejutsu/platformer',
+            videoUrl: '',
+        },
+        {
+            index: 1,
+            name: "Galaxy Shooter",
+            description: "a 2D unity game of a spaceship shooting enemies",
+            imageUrl: getAssetPath('./projects/galaxy_shooter.png'),
+            demoAvailable: true,
+            demoUrl: 'https://bytejutsu.github.io/Galaxy_Shooter/',
+            githubUrl: '',
+            videoUrl: 'https://www.youtube.com/watch?v=uG3FNcwS3Hc&ab_channel=bytejutsu',
+        },
+        {
+            index: 2,
+            name: "Quick POS",
+            description: "a POS system for Prestashop. Simple to use and complete in features",
+            imageUrl: getAssetPath('./projects/quickpos.png'),
+            demoAvailable: false,
+            demoUrl: 'https://bytejutsu.com',
+            githubUrl: '',
+            videoUrl: '',
+        },
+        {
+            index: 3,
+            name: "Tax Stamp",
+            description: "a Prestashop module to add a tax stamp in order to comply with tax regulations",
+            imageUrl: getAssetPath('./projects/taxstamp.png'),
+            demoAvailable: false,
+            demoUrl: 'https://bytejutsu.com',
+            githubUrl: '',
+            videoUrl: '',
+        },
+        {
+            index: 4,
+            name: "Africoin",
+            description: "a concept of a cryptocurrency using the blockchain technology in python",
+            imageUrl: getAssetPath('./projects/africoin.png'),
+            demoAvailable: true,
+            demoUrl: 'https://dnabli007.pythonanywhere.com/',
+            githubUrl: 'https://github.com/bytejutsu/africoin',
+            videoUrl: '',
+        },
+        {
+            index: 5,
+            name: "Rocket Boost",
+            description: "Terminal game made with unity where you guide a rocket through various obstacles",
+            imageUrl: getAssetPath('./projects/rocket_boost.png'),
+            demoAvailable: true,
+            demoUrl: 'https://bytejutsu.github.io/rocket_boost/',
+            githubUrl: 'https://github.com/bytejutsu/rocket_boost',
+            videoUrl: 'https://youtu.be/lwRnkBXG-S0',
+        },
+    ]
+
+    return (
+        <section id="projects" className="bg-gray-900 relative py-20">
+            <div
+                className="absolute inset-0 bg-no-repeat bg-contain opacity-10"
+                style={{
+                    backgroundImage: "url('./pcb_background.png')",
+                    backgroundPosition: "top right",  // Crop to bottom-right quarter
+                    backgroundSize: "50% 100%", // Zoom in to show only a quarter
+                    filter: "invert(85%) sepia(100%) saturate(500%) hue-rotate(20deg)" // Approximate yellow color for non-inline SVGs
+                }}
+            ></div>
+            {/* Mirrored Top Left Corner (Flipped Both Ways) */}
+            <div
+                className="absolute inset-0 bg-no-repeat bg-contain opacity-10"
+                style={{
+                    backgroundImage: "url('./pcb_background.png')",
+                    backgroundPosition: "top right",
+                    backgroundSize: "50% 100%",
+                    transform: "scale(-1, -1)", // Flip both horizontally and vertically
+                    filter: "invert(85%) sepia(100%) saturate(500%) hue-rotate(20deg)"
+                }}
+            ></div>
+            <div className="flex flex-wrap justify-center text-center mb-6 z-1">
+                <CyberpunkButton
+                    buttonStyles={{
+                        color: '#000000', // text-black
+                        padding: '0.75rem', // p-3
+                        textAlign: 'center', // text-center
+                        display: 'inline-flex', // inline-flex
+                        alignItems: 'center', // items-center
+                        justifyContent: 'center', // justify-center
+                        width: '4rem', // w-16
+                        height: '4rem', // h-16
+                        marginBottom: '1.5rem', // mb-6
+                        boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)', // shadow-lg
+                    }}
+                >
+                    <FaDraftingCompass className="text-3xl"/>
+                </CyberpunkButton>
+                <div className="w-full lg:w-6/12 px-4">
+                    <h2 className={`text-7xl text-[#00F0FF] font-semibold ${styles.neonText} font-sans`}>
+                        Projects
+                    </h2>
+                </div>
+                <div className="w-[4rem] h-[4rem]"></div>
+            </div>
+            <EmblaCarousel slides={PROJECTS} options={OPTIONS}/>
+        </section>
+    );
+};
+
+export default ProjectSection;
