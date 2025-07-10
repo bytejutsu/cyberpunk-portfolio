@@ -41,8 +41,8 @@ const press_start_2p = Press_Start_2P({
 });
 
 export const metadata = {
-  title: "ByteJutsu",
-  description: "Welcome to ByteJutsu",
+  title: "Cyberpunk Portfolio",
+  description: "Welcome to Cyberpunk Portfolio",
 };
 
 export default function RootLayout({ children }) {

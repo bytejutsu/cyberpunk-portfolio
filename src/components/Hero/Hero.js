@@ -19,8 +19,7 @@ export default function Hero() {
                                 height: 'auto', // To maintain aspect ratio
                             }}
                             alt="logo"
-                            src={getAssetPath('./hero-image.svg')}
-                            //src={getAssetPath('./logo-tiger.png')}
+                            src={getAssetPath('./logo-tiger.png')}
                         />
                     </div>
                     <div className="flex flex-col justify-around items-center pb-12 space-y-8 md:pt-16 md:items-end">

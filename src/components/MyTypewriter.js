@@ -13,7 +13,7 @@ const MyTypewriter = () => {
                 Press Start to{' '}
                 <span className='text-red-600 font-bold'>
                     <Typewriter
-                        words={[ 'Innovate', 'Craft', 'Level Up', 'Experience', 'Imagine', 'Unleash', 'Pew Peew!!', 'Continue..', 'ByteJutsu!']}
+                        words={[ 'Innovate', 'Craft', 'Level Up', 'Experience', 'Imagine', 'Unleash', 'Pew Peew!!', 'Continue..', 'Be Wild!']}
                         loop={0}
                         cursor
                         cursorStyle='_'

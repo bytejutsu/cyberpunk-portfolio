@@ -78,7 +78,7 @@ const Footer = () => {
                                         width: "100%",
                                         height: "auto", // Maintain aspect ratio
                                     }}
-                                    src={getAssetPath("./hero-image.svg")}
+                                    src={getAssetPath('./logo-tiger.png')}
                                     alt="Logo"
                                 />
                             </div>
