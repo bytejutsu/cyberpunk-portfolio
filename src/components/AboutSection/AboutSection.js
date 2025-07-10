@@ -39,7 +39,7 @@ const AboutSection = () => {
                                     height={100}
                                     priority
                                     alt="Dhia Nabli"
-                                    src={getAssetPath('./avatar.jpg')}
+                                    src={getAssetPath('./avatar_8.jpeg')}
                                     className="object-cover [clip-path:polygon(0%_0%,_90%_0%,_100%_10%,_100%_100%,_0%_100%)]"
                                     style={{
                                         width: '80%',
@@ -80,7 +80,7 @@ const AboutSection = () => {
                         </CyberpunkButton>
                         <div className="w-full lg:w-6/12 px-4">
                             <h2 className={`text-5xl lg:text-7xl text-center text-[#00F0FF] font-sans ${styles.neonText}`}>
-                                Hi, I&apos;m Dhia
+                                Hi, I&apos;m John
                             </h2>
                             <p className="text-lg leading-relaxed m-4 text-gray-200 font-bold font-mono">
                                 I&apos;m a <span className="font-bold font-pixel text-3xl">software engineer</span> with

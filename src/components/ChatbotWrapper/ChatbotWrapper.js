@@ -102,7 +102,7 @@ export default function ChatbotWrapper() {
 
     const flow={
         start: {
-            message: "Hello there I am Apex the Chatbot of ByteJutsu! What should I call you?",
+            message: "Hello there I am Apex the Chatbot of Wild Force! What should I call you?",
             function: (params) => setForm({...form, name: params.userInput}),
             path: "ask_role"
         },
@@ -112,7 +112,7 @@ export default function ChatbotWrapper() {
             path: "ask_customer"
         },
         ask_customer: {
-            message: "Interesting! Are you already a customer of ByteJutsu?",
+            message: "Interesting! Are you already a customer of Wild Force?",
             // alternative way to declare options, with sending of output disabled
             // more info here: https://react-chatbotify.com/docs/api/attributes
             // options: {items: ["Yes", "No"], sendOutput: false}
